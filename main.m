@@ -4,7 +4,9 @@ n=50;
 d=2;
 
 complexity=NaN(1,10);
-for order_max=5:2:11
+save('complexity_n50_p520.txt','complexity','-ascii','-tab');
+
+parfor order_max=5:20
 type='hermite-prob-norm';
 
 N_MC_sample=10;
@@ -22,3 +24,5 @@ end
 
 complexity(1,order_max)=mean(r_emp);
 end
+
+save('complexity_n50_p520.txt','complexity','-ascii','-tab');
