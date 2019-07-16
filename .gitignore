@@ -1,0 +1,4 @@
+*.m~
+*.sh
+*.txt
+ssh_commands.m

@@ -23,4 +23,4 @@ end
 sup=max(sums)/Nq;
 
 
-endfunction
+end
