@@ -1,16 +1,16 @@
 %% Compute the Rademacher complexity for a set of polynomials
 %% set the sample
-n=500;
+for n=[ 50 100 200 500]
 d=1;
 
 complexity=NaN(1,10);
 
 P_max=30;
 parfor_progress(P_max);
-for order_max=1:P_max
+parfor order_max=1:P_max
     type='hermite-prob-norm';
     
-    N_MC_sample=100;
+    N_MC_sample=1000;
     r_emp=NaN(1,N_MC_sample);
     for i_MC_sample=1:N_MC_sample
         points=randn(n,d);
@@ -28,6 +28,8 @@ for order_max=1:P_max
 end
 parfor_progress(0);
 
-fid =fopen('complexity_n50_p520.txt', 'w' );
-fprintf(fid,'%f   ',complexity);
+disp(['n = ' num2str(n)])
 
+filename=['complexity_n' num2str(n) '.txt'];
+save(filename,'complexity','-ascii');
+end 
