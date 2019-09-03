@@ -13,7 +13,7 @@ Rademacher complexity seems to be particularly well-suited for our application s
 The Rademacher complexity is defined as the expectation of the empirical Radmacher complexity ![f1] over all the possible sample ![f2] of size ![f3]:
 
 <p align="center">
-![f4]
+<img width="264" height="41" src="http://chart.apis.google.com/chart?cht=tx&chl=\hat{R}_m(\mathcal{F})=\mathbb{E}_\sigma\left[\sup_{f\in\mathcal{F}}\left(\sum_{i=1}^m\sigma_if(z_i)\right)\right]">
 </p>
 
 where ![f5] is the class of function (for us the polynomials family), and ![f6] are random variable which take value +1 and -1.
@@ -22,6 +22,9 @@ where ![f5] is the class of function (for us the polynomials family), and ![f6] 
 
 For different sample size, the complexity is computed for different orders.
 
+<p align="center">
+  <img width="460" height="300" src="https://github.com/agoupy/rademacher_gPC/blob/master/complexities.png">
+</p>
 
 ## Author
 
