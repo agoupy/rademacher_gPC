@@ -8,7 +8,7 @@ In uncertainty quatification, the efficiency of a metamodel is often evaluated u
 
 Rademacher complexity seems to be particularly well-suited for our application since it deals with a distribution-based sample and is defined for real-valued function and not only for classification problems.
 
-## Computation
+## Rademacher complexity definition
 
 The Rademacher complexity is defined as the expectation of the empirical Radmacher complexity ![f1] over all the possible sample ![f2] of size ![f3]:
 
@@ -18,9 +18,11 @@ The Rademacher complexity is defined as the expectation of the empirical Radmach
 
 where ![f5] is the class of function (for us the polynomials family), and ![f6] are random variable which take value +1 and -1.
 
-## Output
+## Computation
 
-For different sample size, the complexity is computed for different orders.
+In this code the sample ![f2] is supposed to be normally ditributed and ![f5] is the family of Hermite polynomials up to a certin degree.
+
+The complexity is then computed for different degree and different sample size.
 
 <p align="center">
   <img width="460" height="300" src="https://github.com/agoupy/rademacher_gPC/blob/master/complexities.png">
