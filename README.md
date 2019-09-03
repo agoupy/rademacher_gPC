@@ -1,2 +1,38 @@
 # rademacher_gPC
-Compute the Rademacher complexity of Polynomial Chaos 
+
+## Aim of the code
+
+Rademacher complexity has been introduced in the context of omputational learning theory. It aims to quantify the ability of an algorithm to learn from a set of data. 
+
+In uncertainty quatification, the efficiency of a metamodel is often evaluated using error measures. The idea of this code is to compute the Rademacher complexity of Polynomial Chaos Expansion (PCE).
+
+Rademacher complexity seems to be particularly well-suited for our application since it deals with a distribution-based sample and is defined for real-valued function and not only for classification problems.
+
+## Computation
+
+The Rademacher complexity is defined as the expectation of the empirical Radmacher complexity ![f1] over all the possible sample ![f2] of size ![f3]:
+
+<p align="center">
+![f4]
+</p>
+
+where ![f5] is the class of function (for us the polynomials family), and ![f6] are random variable which take value +1 and -1.
+
+## Output
+
+For different sample size, the complexity is computed for different orders.
+
+
+## Author
+
+**Alexandre Goupy** - [agoupy](https://github.com/agoupy)
+
+
+[f1]: http://chart.apis.google.com/chart?cht=tx&chl=\hat{R}_m
+[f2]: http://chart.apis.google.com/chart?cht=tx&chl=\mathcal{S}
+[f3]: http://chart.apis.google.com/chart?cht=tx&chl=m
+[f4]: http://chart.apis.google.com/chart?cht=tx&chl=\hat{R}_m(\mathcal{F})=\mathbb{E}_\sigma\left[\sup_{f\in\mathcal{F}}\left(\sum_{i=1}^m\sigma_if(z_i)\right)\right]
+[f5]: http://chart.apis.google.com/chart?cht=tx&chl=\mathcal{F}
+[f6]: http://chart.apis.google.com/chart?cht=tx&chl=\sigma_i
+
+ 
